@@ -1,0 +1,233 @@
+header
+    background: #f5f5f5
+    width: 100%
+    position: fixed
+    z-index: 999
+    &.fixed
+        box-shadow: 0 0 8px rgba(0,0,0,.15)
+    .menu-wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 10px 0
+        position: relative
+        .minhgiang-logo
+        .main-menu 
+            ul 
+                list-style: none 
+                li 
+                    display: inline-block
+                    border-right: 1px solid #e2e2e2
+                    a 
+                        font-size: 12px
+                        text-transform: uppercase
+                        color: #333333
+                        font-weight: bold
+                        padding: 36px 10px
+                        position: relative
+                        &:after
+                            content: ''
+                            display: block
+                            position: absolute
+                            width: 100%
+                            bottom: 0
+                            height: 2px
+                            background: #ac1f23
+                            opacity: 0
+                        &:before
+                            content: ''
+                            display: block
+                            position: absolute
+                            width: 0
+                            height: 0
+                            bottom: 0
+                            left: 50%
+                            transform: translateX(-50%)
+                            border-left: 5px solid transparent
+                            border-right: 5px solid transparent
+                            border-bottom: 6px solid #ac1f23
+                            opacity: 0
+                    &:hover,&:active
+                        a 
+                            color: #ac1f23
+                            &:before,&:after
+                                opacity: 1     
+        .formsearch
+            z-index: 99
+            .iconsearch
+                width: 35px
+                height: 35px
+                background: none
+                border: 2px solid #999999 
+                border-radius: 50%
+                display: flex 
+                align-items: center
+                justify-content: center
+                em 
+                    color: #ac1f23
+            .searchbox
+                position: absolute
+                bottom: -54px
+                right: 50%
+                transform: translate(50%)
+                display: flex
+                align-items: center
+                padding: 10px
+                opacity: 0
+                transition: all .3s ease-in-out
+                margin-left: auto
+                background: #ffff
+                width: 100% 
+                opacity: 0
+                box-shadow: 0 4px 5px rgba(0,0,0,.1)
+                &.active 
+                    opacity: 1
+                // &:before
+                //     content: ""
+                //     position: absolute
+                //     width: 0
+                //     height: 0
+                //     border-left: 10px solid transparent
+                //     border-right: 10px solid transparent
+                //     border-bottom: 10px solid #ffff
+                //     top: -9px
+                //     right: 5px
+                input[type="text"]
+                    width: 100%
+                    padding: 5px 10px
+                    background: none
+                    border: none
+                    border-bottom: 1px solid #ac1f23
+                    outline: none
+                .button-search
+                    position: absolute
+                    right: 20px
+                    em 
+                        color: #ac1f23
+
+        .language 
+            position: relative
+            .lang-active
+                width: 35px
+                height: 35px
+                border-radius: 50px
+                border: 2px solid #999999
+                justify-content: center
+                align-items: center
+                display: flex
+                a 
+                    color: #333333
+                    font-size: 12px
+            .lang-list
+                position: absolute
+                list-style: none
+                top: 60px
+                left: -20px
+                width: 80px
+                text-align: center
+                background: #ffff
+                box-shadow: 0 4px 5px rgba(0,0,0,.1)
+                display: none
+                z-index: 99
+                li 
+                    a 
+                        font-size: 12px
+                        color: #ac1f23
+            
+        .call
+            height: 35px
+            width: 180px
+            background: #1b4981
+            border-radius: 15px
+            display: flex
+            justify-content: center
+            align-items: center
+            span,em
+                color: #ffff
+                font-size: 15px
+            em 
+                margin-right: 10px
+        .sidebar-menu
+            height: calc(100vh-88px)
+            width: 300px
+            right: -300px
+            background: #ac1f23
+            z-index: 98
+            top: 88px
+            position: fixed
+            transition: .25s ease-in-out
+            &.active
+                right: 0
+                .call
+                    display: block
+                .main-menu
+                    display: block
+        .toggle-button
+            display: none
+            .hamburger--boring
+                outline: none
+                padding: 
+                .hamburger-box
+                    .hamburger-inner
+                        width: 30px
+                        &:after
+                            width: 30px
+                        &:before
+                            width: 30px
+@media (max-width: 1200px)
+    header 
+        .menu-wrapper
+            .call
+                display: none
+            .main-menu
+                display: none
+            .sidebar-menu
+                &.active
+                    .main-menu
+                        ul 
+                            padding: 0
+                            li 
+                                display: block 
+                                padding: 15px 30px
+                                position: relative
+                                border-bottom: 1px solid #b33333
+                                a 
+                                    color: #ffff
+                                    padding: 0
+                                    &:after,&:before
+                                        display: none
+                                &:hover
+                                    border-right: 0
+                                    border-left: 4px solid #ac1f23
+                                    background: #ffff
+                                    transition: all .5s ease-in-out
+                                    &:before
+                                        content: ''
+                                        position: absolute
+                                        display: block
+                                        left: -1px
+                                        top: 50%
+                                        transform: translateY(-50%)
+                                        width: 0
+                                        height: 0
+                                        border-top: 5px solid transparent
+                                        border-left: 5px solid #ac1f23
+                                        border-bottom: 5px solid transparent
+                                    a 
+                                        color: #ac1f23
+                    .call
+                        bottom: 0
+                        position: absolute
+                        border-radius: 0
+                        align-items: center
+                        display: flex
+                        width: 100%
+            .formsearch
+                margin-left: auto
+                margin-right: 10px
+            .language
+                margin-right: 20px
+            .toggle-button
+                display: block
+
+

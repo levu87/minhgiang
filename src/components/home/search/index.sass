@@ -1,0 +1,50 @@
+.home-search
+    padding: 60px 0 
+    background: #ac1f23
+    @media (max-width: 768px)
+        padding: 40px 0
+    .title
+        text-align: center
+        padding-bottom: 20px
+        h2 
+            font-size: 30px
+            color: #ffffff
+            text-transform: uppercase
+    .search-wrap 
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+        select
+            width: 330px
+            height: 50px
+            background: #ffffff
+            border: none
+            border-radius: 0
+            color: rgba(#333333, .5)
+            outline: none
+            padding: 0 20px
+        .nam 
+            border-top-left-radius: 25px
+            border-bottom-left-radius: 25px
+        .btn-search 
+            width: 100px
+            height: 50px
+            border-top-right-radius: 25px
+            border-bottom-right-radius: 25px
+            background: #cf2435
+            display: flex
+            align-items: center
+            justify-content: center
+            em 
+                color: #ffffff
+    @media (max-width: 1200px)
+        .search-wrap
+            flex-direction: column
+            align-items: center
+            .nam,.btn-search,select
+                margin: 10px 0
+                border-radius: 0
+            .btn-search
+                width: 330px
+
+

@@ -1,0 +1,76 @@
+.home-gioithieu
+    padding: 60px 0
+    .title
+        h2 
+            font-size: 30px 
+            color: #000000
+            text-transform: uppercase
+            padding-bottom: 40px
+    .content 
+        padding: 0
+        p 
+            font-size: 24px
+            padding-bottom: 40px
+        .list-item 
+            .item 
+                figure 
+                    figcaption 
+                        h3 
+                            font-size: 18px
+                            padding: 20px 0
+                        p 
+                            font-size: 13px
+                            padding: 0
+        @media (max-width: 1025px)
+            .list-item
+                padding-bottom: 20px
+    .img 
+        padding: 0
+        position: relative
+        img 
+            width: 100%
+        .btn-viewmore
+            position: absolute
+            bottom: 150px
+            left: 50%
+            transform: translateX(-50%)
+            width: 200px
+            height: 50px
+            background: #ac1f23
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 30px
+            font-weight: bold
+            color: #ffff
+            em 
+                margin-left: 10px
+                font-weight: 500
+@media (max-width: 992px)
+    .home-gioithieu
+        padding: 40px 10px
+        .title
+            h2 
+                font-size: 25px
+                padding-bottom: 30px
+        .content
+            p 
+                font-size: 20px
+                padding-bottom: 30px
+@media (max-width: 768px)
+    .home-gioithieu
+        .title
+            h2 
+                font-size: 20px
+                padding-bottom: 25px
+        .content
+            p 
+                font-size: 16px
+                
+            .list-item 
+                text-align: center
+                .item 
+                    flex: 0 0 100%
+                    max-width: 100%
+                    padding: 10px
+
